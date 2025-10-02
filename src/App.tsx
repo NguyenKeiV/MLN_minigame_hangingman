@@ -122,7 +122,7 @@ const IntroVideo: React.FC<{ onStartGame: () => void }> = ({ onStartGame }) => {
             </div>
           </div>
           
-          {/* CSS Animation cho hiệu ứng mờ rõ */}
+          
           <style jsx>{`
             @keyframes fadeInOut {
               0%, 100% { opacity: 0.7; }
