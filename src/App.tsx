@@ -93,27 +93,14 @@ const IntroVideo: React.FC<{ onStartGame: () => void }> = ({ onStartGame }) => {
           {/* Overlay với nút điều khiển */}
           <div className="absolute inset-0">
             {/* Nút bắt đầu chơi game - bên phải */}
-            <div className="absolute right-10 top-1/2 transform -translate-y-1/2">
-              {showStartButton && (
-                <button
-                  onClick={onStartGame}
-                  className="bg-indigo-600 bg-opacity-80 hover:bg-indigo-700 hover:bg-opacity-90 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3 shadow-2xl text-xl backdrop-blur-sm animate-pulse"
-                  style={{
-                    animation: 'fadeInOut 2s ease-in-out infinite'
-                  }}
-                >
-                  <Play size={24} />
-                  Bắt đầu chơi game
-                </button>
-              )}
-            </div>
+            
             
             {/* Nút bỏ qua intro - dưới cùng giữa */}
             <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
               {showStartButton && (
                 <button
                   onClick={onStartGame}
-                  className="text-white text-opacity-80 hover:text-opacity-100 flex items-center gap-2 text-sm transition-all duration-200 backdrop-blur-sm bg-black bg-opacity-30 px-4 py-2 rounded-full"
+                  className="text-white text-opacity-80 hover:text-opacity-500 flex items-end gap-2 text-sm transition-all duration-200 backdrop-blur-sm bg-black bg-opacity-30 px-4 py-2 rounded-full"
                 >
                   <SkipForward size={16} />
                   Bỏ qua intro
@@ -143,13 +130,7 @@ const IntroVideo: React.FC<{ onStartGame: () => void }> = ({ onStartGame }) => {
             </div>
           </div>
           
-          <button
-            onClick={onStartGame}
-            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-3 shadow-2xl text-xl mx-auto"
-          >
-            <Play size={24} />
-            Bắt đầu chơi game
-          </button>
+          
         </div>
       )}
     </div>
