@@ -42,56 +42,7 @@ const QUESTIONS = [
       "Đi kèm với trách nhiệm cá nhân.",
     ],
   },
-  {
-    word: "Bi quan",
-    hints: [
-      "Quan điểm cho rằng cuộc sống đầy đau khổ.",
-      "Nhìn vào mặt xấu, tiêu cực của sự vật.",
-      "Tin rằng khổ đau nhiều hơn hạnh phúc.",
-      "Triết lý của Schopenhauer thuộc loại này.",
-      "Trái ngược với lạc quan.",
-    ],
-  },
-  {
-    word: "Khổ đau",
-    hints: [
-      "Trạng thái đau khổ về thể xác hoặc tinh thần.",
-      "Phật giáo xem đây là sự thật đầu tiên của cuộc đời.",
-      "Một chủ đề chính trong triết học hiện sinh.",
-      'Theo Schopenhauer: nguồn gốc từ "ý chí sống".',
-      "Mọi người đều trải nghiệm trong cuộc sống.",
-    ],
-  },
-  {
-    word: "Ý nghĩa",
-    hints: [
-      "Giá trị, mục đích hoặc lý do tồn tại của một sự vật.",
-      "Triết học hiện sinh tìm kiếm điều này trong cuộc sống.",
-      "Chủ nghĩa hư vô cho rằng cuộc đời không có nó.",
-      "Mỗi người phải tự tìm cho riêng mình.",
-      'Câu hỏi: "Ý nghĩa của cuộc đời là gì?"',
-    ],
-  },
-  {
-    word: "Cô đơn",
-    hints: [
-      "Trạng thái một mình, thiếu kết nối với người khác.",
-      "Cảm giác bị tách biệt khỏi thế giới xung quanh.",
-      "Một chủ đề quan trọng trong triết học hiện sinh.",
-      "Con người về bản chất luôn cảm thấy điều này.",
-      "Có thể dẫn đến sự trống rỗng và tuyệt vọng.",
-    ],
-  },
-  {
-    word: "Chân lý",
-    hints: [
-      "Điều đúng đắn, không thể phủ nhận.",
-      "Những gì phản ánh đúng thực tại.",
-      "Triết học tìm kiếm điều này.",
-      "Có thể là tuyệt đối hoặc tương đối.",
-      "Đối lập với sai lầm và ảo tưởng.",
-    ],
-  },
+  
   {
     word: "Hiện sinh",
     hints: [
@@ -103,36 +54,6 @@ const QUESTIONS = [
     ],
   },
   {
-    word: "Vô thường",
-    hints: [
-      "Mọi thứ đều thay đổi, không gì là vĩnh cửu.",
-      "Một khái niệm quan trọng trong Phật giáo.",
-      "Không có gì tồn tại mãi mãi.",
-      "Cuộc sống luôn biến động, không ổn định.",
-      "Chấp nhận điều này giúp giảm đau khổ.",
-    ],
-  },
-  {
-    word: "Tuyệt vọng",
-    hints: [
-      "Mất hết hy vọng, cảm thấy vô vọng.",
-      "Trạng thái tinh thần cực kỳ đau khổ.",
-      "Có thể dẫn đến chủ nghĩa hư vô.",
-      "Kierkegaard viết nhiều về trạng thái này.",
-      "Cảm giác không còn đường ra, không thể thay đổi.",
-    ],
-  },
-  {
-    word: "Tĩnh tâm",
-    hints: [
-      "Trạng thái tâm hồn bình yên, không dao động.",
-      "Mục tiêu của nhiều trường phái triết học Đông phương.",
-      "Đạt được qua thiền định và tự suy ngẫm.",
-      "Thoát khỏi ồn ào và lo âu.",
-      "Tâm trí trong sáng, ổn định.",
-    ],
-  },
-  {
     word: "Giản dị",
     hints: [
       "Sống đơn giản, không phức tạp.",
@@ -140,76 +61,6 @@ const QUESTIONS = [
       "Lão Tử và Diogenes đề cao lối sống này.",
       "Tránh xa sự xa hoa và phô trương.",
       "Hạnh phúc từ những điều nhỏ nhặt.",
-    ],
-  },
-  {
-    word: "Bản chất",
-    hints: [
-      "Đặc tính cốt lõi, không thay đổi của sự vật.",
-      "Cái làm nên sự vật là chính nó.",
-      'Sartre: "Hiện hữu có trước ..."',
-      "Con người không có bản chất cố định từ đầu.",
-      "Ta tự tạo ra nó qua hành động.",
-    ],
-  },
-  {
-    word: "Lo âu",
-    hints: [
-      "Cảm giác bất an, sợ hãi không rõ nguyên nhân.",
-      "Một trạng thái cơ bản của con người.",
-      "Heidegger coi đây là cảm xúc quan trọng.",
-      "Phát sinh khi đối mặt với tự do và cái chết.",
-      "Khác với nỗi sợ có đối tượng cụ thể.",
-    ],
-  },
-  {
-    word: "Định mệnh",
-    hints: [
-      "Số phận được định sẵn, không thể thay đổi.",
-      "Mọi sự việc đã được quyết định trước.",
-      "Đối lập với tự do ý chí.",
-      "Một số triết gia tin vào sự tồn tại của nó.",
-      "Con người có thể chấp nhận hoặc chống lại nó.",
-    ],
-  },
-  {
-    word: "Đạo đức",
-    hints: [
-      "Các nguyên tắc phân biệt đúng sai, tốt xấu.",
-      "Hướng dẫn hành vi của con người.",
-      "Một nhánh chính của triết học.",
-      "Có thể dựa trên lý trí hoặc cảm xúc.",
-      "Kant và Mill nghiên cứu sâu về lĩnh vực này.",
-    ],
-  },
-  {
-    word: "Giác ngộ",
-    hints: [
-      "Đạt được trạng thái hiểu biết cao nhất.",
-      "Thức tỉnh về bản chất thực tại.",
-      "Mục tiêu cuối cùng trong Phật giáo.",
-      "Thoát khỏi vô minh và ảo tưởng.",
-      "Đức Phật đạt được điều này dưới cây bồ đề.",
-    ],
-  },
-  {
-    word: "Vị kỷ",
-    hints: [
-      "Chỉ quan tâm đến lợi ích bản thân.",
-      "Hành động vì mục đích cá nhân.",
-      "Đối lập với lòng vị tha.",
-      "Một số triết gia cho đây là bản tính con người.",
-      "Có thể dẫn đến hành vi phi đạo đức.",
-    ],
-  },
-  {
-    word: "Vị tha",
-    hints: [
-      "Quan tâm đến người khác nhiều hơn bản thân.",
-      "Hành động vì lợi ích của người khác.",
-      "Đối lập với chủ nghĩa vị kỷ.",
-      "Một đức tính được đề cao trong nhiều tôn giáo.",
-      "Hy sinh lợi ích cá nhân vì người khác.",
     ],
   },
 ];
@@ -461,23 +312,23 @@ const IntroVideo: React.FC<{ onStartGame: () => void }> = ({ onStartGame }) => {
     <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 z-50 flex items-center justify-center">
       {!videoError ? (
         <div className="relative w-full h-full">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/hd4vRbjMyKE?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1"
-            title="Intro Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            onLoad={() => {
-              setTimeout(() => {
-                setShowStartButton(true);
-              }, 10000);
-            }}
-            onError={handleVideoError}
-          />
+           <iframe
+        className="absolute top-0 left-0 w-full h-full z-50"
+        src="https://www.youtube.com/embed/hd4vRbjMyKE?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1"
+        title="Intro Video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        onLoad={() => {
+          setTimeout(() => {
+            setShowStartButton(true);
+          }, 10000);
+        }}
+        onError={handleVideoError}
+      />
 
           <div className="absolute inset-0">
-            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <div className="absolute top-1/2 right-1 transform -translate-x-1/2">
               {showStartButton && (
                 <button
                   onClick={onStartGame}
