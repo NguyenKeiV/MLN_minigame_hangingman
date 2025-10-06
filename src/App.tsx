@@ -328,18 +328,19 @@ const IntroVideo: React.FC<{ onStartGame: () => void }> = ({ onStartGame }) => {
       />
 
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 right-1 transform -translate-x-1/2">
-              {showStartButton && (
-                <button
-                  onClick={onStartGame}
-                  className="text-white text-opacity-80 hover:text-opacity-100 flex items-center gap-2 text-sm transition-all duration-300 backdrop-blur-sm bg-black bg-opacity-30 px-6 py-3 rounded-full hover:scale-110 transform hover:shadow-2xl"
-                >
-                  <SkipForward size={16} />
-                  Bỏ qua intro
-                </button>
-              )}
-            </div>
-          </div>
+  <div className="absolute top-1/2 right-4 -translate-y-1/2 z-[9999]">
+    {showStartButton && (
+      <button
+        onClick={onStartGame}
+        className="text-white text-opacity-80 hover:text-opacity-100 flex items-center gap-2 text-sm transition-all duration-300 backdrop-blur-sm bg-black bg-opacity-30 px-6 py-3 rounded-full hover:scale-110 hover:shadow-2xl"
+      >
+        <SkipForward size={16} />
+        Bỏ qua intro
+      </button>
+    )}
+  </div>
+</div>
+
         </div>
       ) : (
         <div className="text-center text-white p-8 relative">
