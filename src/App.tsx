@@ -10,9 +10,8 @@ import {
 } from "lucide-react";
 
 const MAX_WRONG_GUESSES = 6;
-
 const QUESTIONS = [
-  {
+   {
     word: "Hư vô",
     hints: [
       "Một định nghĩa mà chủ nghĩa triết học cho rằng cuộc sống không có ý nghĩa nội tại.",
@@ -25,7 +24,7 @@ const QUESTIONS = [
   {
     word: "Lão Tử",
     hints: [
-      "Đây là Triết gia Trung Quốc cổ đại, người sáng lập Đạo gia.",
+      "Triết gia Trung Quốc cổ đại, người sáng lập Đạo gia.",
       'Tác giả cuốn "Đạo Đức Kinh" nổi tiếng.',
       'Dạy về "Vô vi" - sống thuận theo tự nhiên.',
       'Tin vào "Đạo" - nguyên lý tối cao của vũ trụ.',
@@ -35,35 +34,337 @@ const QUESTIONS = [
   {
     word: "Tự do",
     hints: [
-      "Một từ thể hiện khả năng tự quyết định và hành động theo ý muốn.",
+      "Khả năng tự quyết định và hành động theo ý muốn của con người.",
       "Không bị ràng buộc hay cưỡng ép.",
       "Một giá trị cốt lõi trong triết học hiện sinh.",
-      'Theo Sartre: con người "bị kết án" phải có nó.',
-      "Đi kèm với trách nhiệm cá nhân.",
+      "Tự do luôn đi kèm với trách nhiệm.",
+      "Không ai có thể có nó thay cho bạn.",
     ],
   },
-  
   {
     word: "Hiện sinh",
     hints: [
-      "Đây là Triết lý tập trung vào sự tồn tại cá nhân.",
+      "Triết lý tập trung vào sự tồn tại cá nhân.",
       "Nhấn mạnh tự do, trách nhiệm và lựa chọn.",
       "Con người tự tạo ra bản chất của mình.",
-      "Sartre và Camus là những đại diện nổi tiếng.",
-      "Quan tâm đến cảm giác lo âu và tuyệt vọng.",
+      "Đề cao cảm xúc và ý nghĩa sống.",
+      "Quan tâm đến lo âu, sợ hãi, và cô đơn.",
     ],
   },
   {
     word: "Giản dị",
     hints: [
-      "Từ chỉ lối sống đơn giản, không phức tạp.",
+      "Lối sống đơn giản, không phức tạp.",
       "Ít ham muốn vật chất.",
-      "Lão Tử và Diogenes đề cao lối sống này.",
-      "Tránh xa sự xa hoa và phô trương.",
-      "Hạnh phúc từ những điều nhỏ nhặt.",
+      "Đề cao sự tự nhiên và khiêm tốn.",
+      "Tránh xa xa hoa và phô trương.",
+      "Hạnh phúc đến từ những điều nhỏ nhặt.",
+    ],
+  },
+  {
+    word: "Khổng Tử",
+    hints: [
+      "Triết gia Trung Hoa cổ đại sáng lập Nho gia.",
+      "Chủ trương sống theo lễ, nghĩa, nhân, trí, tín.",
+      "Nhấn mạnh đạo hiếu và trật tự xã hội.",
+      "Tư tưởng của ông được ghi trong 'Luận Ngữ'.",
+      "Ảnh hưởng sâu sắc đến văn hóa Á Đông.",
+    ],
+  },
+  {
+    word: "Trang Tử",
+    hints: [
+      "Triết gia Đạo gia, kế thừa tư tưởng của Lão Tử.",
+      "Nổi tiếng với tư tưởng 'tiêu dao tự tại'.",
+      "Câu chuyện 'Trang Chu mộng hồ điệp' thể hiện triết lý mộng và thực.",
+      "Chủ trương sống thuận theo tự nhiên, không chấp nhị nguyên.",
+      "Phê phán danh lợi và quyền lực.",
+    ],
+  },
+  {
+    word: "Đạo đức",
+    hints: [
+      "Hệ thống nguyên tắc giúp con người phân biệt đúng sai.",
+      "Liên quan đến cách hành xử của cá nhân trong xã hội.",
+      "Kant cho rằng nó gắn với bổn phận và lý trí.",
+      "Không đồng nhất với pháp luật, nhưng có ảnh hưởng lớn.",
+      "Là nền tảng cho sự ổn định xã hội.",
+    ],
+  },
+  {
+    word: "Chủ nghĩa duy vật",
+    hints: [
+      "Quan niệm cho rằng vật chất là cái có trước, ý thức là cái có sau.",
+      "Đối lập với chủ nghĩa duy tâm.",
+      "Là cơ sở triết học của Marx – Lenin.",
+      "Nhấn mạnh vai trò của tồn tại vật chất trong việc quyết định ý thức.",
+      "Đề cao tính khách quan của thế giới.",
+    ],
+  },
+  {
+    word: "Phật giáo",
+    hints: [
+      "Tôn giáo và triết lý khởi nguồn từ Ấn Độ cổ đại.",
+      "Do Thích Ca Mâu Ni sáng lập.",
+      "Chủ trương Tứ Diệu Đế và Bát Chánh Đạo.",
+      "Mục tiêu tối hậu là giải thoát khỏi khổ đau.",
+      "Quan niệm về vô thường và vô ngã.",
+    ],
+  },
+  {
+    word: "Hạnh phúc",
+    hints: [
+      "Trạng thái mãn nguyện và bình an trong tâm hồn.",
+      "Theo Aristotle, là mục tiêu tối cao của đời người.",
+      "Epicurus cho rằng nó đến từ sự khoái lạc giản đơn.",
+      "Không phụ thuộc hoàn toàn vào vật chất.",
+      "Liên hệ chặt chẽ với đạo đức và ý nghĩa sống.",
+    ],
+  },
+  {
+    word: "Ý thức",
+    hints: [
+      "Khả năng con người phản ánh hiện thực khách quan.",
+      "Hình thành qua hoạt động thực tiễn và ngôn ngữ.",
+      "Theo Marx: là sản phẩm xã hội của bộ não người.",
+      "Không tồn tại độc lập mà phụ thuộc vào vật chất.",
+      "Là yếu tố quyết định hành động có ý nghĩa.",
+    ],
+  },
+  {
+    word: "Biện chứng",
+    hints: [
+      "Phương pháp nhận thức coi sự vật luôn vận động và biến đổi.",
+      "Nhấn mạnh mối liên hệ, mâu thuẫn và phát triển.",
+      "Hegel và Marx là hai đại biểu tiêu biểu.",
+      "Trái ngược với tư duy siêu hình, tĩnh tại.",
+      "Gồm ba quy luật: lượng – chất, mâu thuẫn, phủ định của phủ định.",
+    ],
+  },
+  {
+    word: "Tri thức",
+    hints: [
+      "Kết quả của quá trình nhận thức và kinh nghiệm con người.",
+      "Bao gồm hiểu biết, kỹ năng và thông tin.",
+      "Theo Plato: là niềm tin đúng đắn có lý do.",
+      "Là sức mạnh giúp con người cải tạo thế giới.",
+      "Không ngừng mở rộng qua học tập và khám phá.",
+    ],
+  },
+
+  // --- 25 câu mới hoàn toàn tiếng Việt ---
+  {
+    word: "Chân lý",
+    hints: [
+      "Điều đúng đắn phản ánh hiện thực khách quan.",
+      "Không phụ thuộc vào cảm xúc chủ quan.",
+      "Luôn gắn liền với thực tiễn và kiểm chứng.",
+      "Có thể thay đổi theo trình độ nhận thức.",
+      "Là mục tiêu của quá trình tìm hiểu tri thức.",
+    ],
+  },
+  {
+    word: "Công bằng",
+    hints: [
+      "Nguyên tắc xử lý mọi việc một cách vô tư, không thiên vị.",
+      "Là nền tảng của đạo đức và pháp luật.",
+      "Ai cũng có quyền được đối xử như nhau.",
+      "Không đồng nghĩa với chia đều mọi thứ.",
+      "Gắn liền với sự chính trực và nhân nghĩa.",
+    ],
+  },
+  {
+    word: "Trách nhiệm",
+    hints: [
+      "Bổn phận của con người đối với hành động của mình.",
+      "Đi kèm với quyền tự do và lựa chọn.",
+      "Là tiêu chí thể hiện sự trưởng thành.",
+      "Không thể đổ lỗi cho người khác.",
+      "Càng có tự do, càng phải có trách nhiệm.",
+    ],
+  },
+  {
+    word: "Niềm tin",
+    hints: [
+      "Sự tin tưởng vào điều gì đó là đúng hoặc có ý nghĩa.",
+      "Là động lực tinh thần giúp con người vượt qua khó khăn.",
+      "Có thể dựa trên lý trí hoặc cảm xúc.",
+      "Khi mù quáng, nó trở thành nguy hiểm.",
+      "Giữ vững nó là sức mạnh của tâm hồn.",
+    ],
+  },
+  {
+    word: "Đạo",
+    hints: [
+      "Khái niệm trung tâm trong triết học phương Đông.",
+      "Chỉ con đường, nguyên lý, hoặc quy luật của vũ trụ.",
+      "Lão Tử xem nó là nguồn gốc của vạn vật.",
+      "Không thể nói bằng lời, chỉ có thể cảm nhận.",
+      "Sống thuận theo nó là hòa hợp với tự nhiên.",
+    ],
+  },
+  {
+    word: "Nhân",
+    hints: [
+      "Một trong năm đức của Nho gia: Nhân, Nghĩa, Lễ, Trí, Tín.",
+      "Thể hiện lòng yêu thương, bác ái và nhân hậu.",
+      "Khổng Tử xem đây là gốc của đạo làm người.",
+      "Biểu hiện qua việc quan tâm đến người khác.",
+      "Là nền tảng của hòa bình và đạo đức.",
+    ],
+  },
+  {
+    word: "Nghĩa",
+    hints: [
+      "Làm điều phải, phù hợp với đạo lý và lẽ công bằng.",
+      "Đặt lợi ích chung lên trên lợi ích cá nhân.",
+      "Là một trong các đức tính căn bản của Nho gia.",
+      "Người có nghĩa không màng danh lợi.",
+      "Thường đi đôi với chữ Nhân.",
+    ],
+  },
+  {
+    word: "Trí tuệ",
+    hints: [
+      "Khả năng hiểu biết sâu sắc và phán đoán đúng đắn.",
+      "Không chỉ là kiến thức mà còn là cách sử dụng chúng.",
+      "Trong Phật giáo, được xem là chìa khóa giải thoát.",
+      "Người trí tuệ không chỉ học, mà còn biết buông bỏ.",
+      "Là ngọn đèn soi sáng hành động đúng đắn.",
+    ],
+  },
+  {
+    word: "Từ bi",
+    hints: [
+      "Lòng thương yêu và cảm thông với mọi sinh linh.",
+      "Giúp con người sống hòa hợp và vị tha.",
+      "Là đức hạnh trung tâm trong Phật giáo.",
+      "Không phân biệt bạn – thù, thân – sơ.",
+      "Sức mạnh lớn hơn cả bạo lực.",
+    ],
+  },
+  {
+    word: "Vô ngã",
+    hints: [
+      "Quan niệm của Phật giáo về bản thân không tồn tại độc lập.",
+      "Không có cái 'tôi' cố định hay vĩnh viễn.",
+      "Mọi thứ đều do duyên hợp mà thành.",
+      "Giúp con người buông bỏ chấp niệm và đau khổ.",
+      "Là bước tiến cao trong nhận thức tâm linh.",
+    ],
+  },
+  {
+    word: "Vô thường",
+    hints: [
+      "Mọi vật và hiện tượng luôn thay đổi, không cố định.",
+      "Là một chân lý căn bản của Phật giáo.",
+      "Nhắc con người sống tỉnh thức và trân trọng hiện tại.",
+      "Không có gì tồn tại mãi mãi.",
+      "Biết điều này là nguồn gốc của an lạc.",
+    ],
+  },
+  {
+    word: "Đam mê",
+    hints: [
+      "Nguồn năng lượng mạnh mẽ thúc đẩy hành động.",
+      "Có thể dẫn đến sáng tạo hoặc mù quáng.",
+      "Khi có lý trí dẫn đường, nó tạo ra kỳ tích.",
+      "Khi mất kiểm soát, nó trở thành gánh nặng.",
+      "Là lửa của cuộc sống, nhưng phải biết giữ vừa đủ.",
+    ],
+  },
+  {
+    word: "Tham vọng",
+    hints: [
+      "Khát khao đạt được điều gì lớn lao.",
+      "Nếu có đạo đức, nó thúc đẩy phát triển.",
+      "Nếu thiếu kiểm soát, nó gây ra hủy diệt.",
+      "Là động lực hai mặt của con người.",
+      "Không có nó, xã hội khó tiến lên.",
+    ],
+  },
+  {
+    word: "Khoan dung",
+    hints: [
+      "Thái độ biết tha thứ và chấp nhận sự khác biệt.",
+      "Giúp con người chung sống hòa bình.",
+      "Không đồng nghĩa với yếu đuối hay thỏa hiệp.",
+      "Là biểu hiện của người có trí và có tâm.",
+      "Cần thiết trong một xã hội đa dạng.",
+    ],
+  },
+  {
+    word: "Tỉnh thức",
+    hints: [
+      "Trạng thái nhận biết rõ ràng hiện tại, không phán xét.",
+      "Là cốt lõi trong thiền và đạo Phật.",
+      "Giúp con người kiểm soát cảm xúc và hành động.",
+      "Sống tỉnh thức là sống thật với chính mình.",
+      "Mang lại bình an nội tâm.",
+    ],
+  },
+  {
+    word: "Cái đẹp",
+    hints: [
+      "Một phạm trù thẩm mỹ phản ánh sự hài hòa và hoàn thiện.",
+      "Không chỉ ở hình thức mà còn ở tinh thần.",
+      "Mỗi thời đại, văn hóa lại có tiêu chuẩn riêng.",
+      "Liên quan mật thiết đến cái thiện và cái chân.",
+      "Cảm nhận được nó giúp tâm hồn phong phú hơn.",
+    ],
+  },
+  {
+    word: "Cái thiện",
+    hints: [
+      "Điều đúng đắn, tốt đẹp và có lợi cho con người.",
+      "Đối lập với cái ác.",
+      "Là mục tiêu của đạo đức và tôn giáo.",
+      "Có thể khác nhau tùy vào bối cảnh văn hóa.",
+      "Khi cái thiện thắng, xã hội được an bình.",
+    ],
+  },
+  {
+    word: "Cái ác",
+    hints: [
+      "Hành vi gây đau khổ hoặc hủy hoại người khác.",
+      "Thường bắt nguồn từ vô minh và lòng tham.",
+      "Không phải bẩm sinh, mà do điều kiện xã hội.",
+      "Triết học và tôn giáo đều tìm cách lý giải nó.",
+      "Chỉ khi hiểu được nó, con người mới tránh được.",
+    ],
+  },
+  {
+    word: "Bản ngã",
+    hints: [
+      "Cái tôi cá nhân trong mỗi con người.",
+      "Khi quá lớn, nó sinh ra kiêu ngạo và ích kỷ.",
+      "Khi hiểu rõ, ta làm chủ được mình.",
+      "Phật giáo khuyên nên buông bỏ để đạt giải thoát.",
+      "Không tiêu diệt nó, mà cần hiểu và kiểm soát.",
+    ],
+  },
+  {
+    word: "Thời gian",
+    hints: [
+      "Dòng chảy liên tục không ngừng của sự vật.",
+      "Không ai có thể dừng hay quay ngược nó.",
+      "Triết học xem đây là phạm trù cơ bản của tồn tại.",
+      "Chỉ trong hiện tại, con người mới thật sự sống.",
+      "Là thước đo của sự biến đổi.",
+    ],
+  },
+  {
+    word: "Tồn tại",
+    hints: [
+      "Khái niệm chỉ sự có mặt của mọi sự vật, hiện tượng.",
+      "Là điều kiện tiên quyết của mọi nhận thức.",
+      "Triết học xem nó là nền tảng của bản thể học.",
+      "Không tồn tại thì không có nhận thức.",
+      "Câu hỏi 'tồn tại là gì' là trung tâm của triết học.",
     ],
   },
 ];
+
 
 const VIETNAMESE_ALPHABET = [
   "A",
