@@ -15,7 +15,7 @@ const QUESTIONS = [
   {
     word: "Hư vô",
     hints: [
-      "Chủ nghĩa triết học cho rằng cuộc sống không có ý nghĩa nội tại.",
+      "Một định nghĩa mà chủ nghĩa triết học cho rằng cuộc sống không có ý nghĩa nội tại.",
       'Từ tiếng Latin "nihil" nghĩa là "không có gì".',
       "Tin rằng không có giá trị đạo đức tuyệt đối nào.",
       "Xuất hiện mạnh ở Nga thế kỷ 19.",
@@ -25,7 +25,7 @@ const QUESTIONS = [
   {
     word: "Lão Tử",
     hints: [
-      "Triết gia Trung Quốc cổ đại, người sáng lập Đạo gia.",
+      "Đây là Triết gia Trung Quốc cổ đại, người sáng lập Đạo gia.",
       'Tác giả cuốn "Đạo Đức Kinh" nổi tiếng.',
       'Dạy về "Vô vi" - sống thuận theo tự nhiên.',
       'Tin vào "Đạo" - nguyên lý tối cao của vũ trụ.',
@@ -35,7 +35,7 @@ const QUESTIONS = [
   {
     word: "Tự do",
     hints: [
-      "Khả năng tự quyết định và hành động theo ý muốn.",
+      "Một từ thể hiện khả năng tự quyết định và hành động theo ý muốn.",
       "Không bị ràng buộc hay cưỡng ép.",
       "Một giá trị cốt lõi trong triết học hiện sinh.",
       'Theo Sartre: con người "bị kết án" phải có nó.',
@@ -46,7 +46,7 @@ const QUESTIONS = [
   {
     word: "Hiện sinh",
     hints: [
-      "Triết lý tập trung vào sự tồn tại cá nhân.",
+      "Đây là Triết lý tập trung vào sự tồn tại cá nhân.",
       "Nhấn mạnh tự do, trách nhiệm và lựa chọn.",
       "Con người tự tạo ra bản chất của mình.",
       "Sartre và Camus là những đại diện nổi tiếng.",
@@ -56,7 +56,7 @@ const QUESTIONS = [
   {
     word: "Giản dị",
     hints: [
-      "Sống đơn giản, không phức tạp.",
+      "Từ chỉ lối sống đơn giản, không phức tạp.",
       "Ít ham muốn vật chất.",
       "Lão Tử và Diogenes đề cao lối sống này.",
       "Tránh xa sự xa hoa và phô trương.",
@@ -451,7 +451,7 @@ function App() {
     setGuessedLetters([]);
     setWrongGuesses(0);
     setGameStatus("playing");
-    setUsedHints([]);
+    setUsedHints([0]);
   };
 
   const nextQuestion = () => {
