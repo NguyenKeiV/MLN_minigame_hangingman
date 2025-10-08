@@ -11,7 +11,7 @@ import {
 
 const MAX_WRONG_GUESSES = 6;
 const QUESTIONS = [
-   {
+  {
     word: "Hư vô",
     hints: [
       "Một định nghĩa mà chủ nghĩa triết học cho rằng cuộc sống không có ý nghĩa nội tại.",
@@ -81,7 +81,7 @@ const QUESTIONS = [
       "Phê phán danh lợi và quyền lực.",
     ],
   },
- 
+
   {
     word: "Chủ nghĩa duy vật",
     hints: [
@@ -184,7 +184,7 @@ const QUESTIONS = [
       "Giữ vững nó là sức mạnh của tâm hồn.",
     ],
   },
- 
+
   {
     word: "Nhân",
     hints: [
@@ -276,7 +276,7 @@ const QUESTIONS = [
       "Mang lại bình an nội tâm.",
     ],
   },
- 
+
   {
     word: "Cái thiện",
     hints: [
@@ -484,9 +484,8 @@ const HangmanDrawing: React.FC<{ wrongGuesses: number }> = ({
             y2="160"
             stroke="#EF4444"
             strokeWidth="3"
-            className={`drop-shadow-md ${
-              wrongGuesses === 3 ? "animate-pulse" : ""
-            }`}
+            className={`drop-shadow-md ${wrongGuesses === 3 ? "animate-pulse" : ""
+              }`}
           />
         )}
         {wrongGuesses >= 4 && (
@@ -497,9 +496,8 @@ const HangmanDrawing: React.FC<{ wrongGuesses: number }> = ({
             y2="160"
             stroke="#EF4444"
             strokeWidth="3"
-            className={`drop-shadow-md ${
-              wrongGuesses === 4 ? "animate-pulse" : ""
-            }`}
+            className={`drop-shadow-md ${wrongGuesses === 4 ? "animate-pulse" : ""
+              }`}
           />
         )}
         {wrongGuesses >= 5 && (
@@ -510,9 +508,8 @@ const HangmanDrawing: React.FC<{ wrongGuesses: number }> = ({
             y2="180"
             stroke="#EF4444"
             strokeWidth="3"
-            className={`drop-shadow-md ${
-              wrongGuesses === 5 ? "animate-pulse" : ""
-            }`}
+            className={`drop-shadow-md ${wrongGuesses === 5 ? "animate-pulse" : ""
+              }`}
           />
         )}
         {wrongGuesses >= 6 && (
@@ -577,34 +574,34 @@ const IntroVideo: React.FC<{ onStartGame: () => void }> = ({ onStartGame }) => {
     <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-pink-900 to-indigo-900 z-50 flex items-center justify-center">
       {!videoError ? (
         <div className="relative w-full h-full">
-           <iframe
-        className="absolute top-0 left-0 w-full h-full z-50"
-        src="https://www.youtube.com/embed/hd4vRbjMyKE?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1"
-        title="Intro Video"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowFullScreen
-        onLoad={() => {
-          setTimeout(() => {
-            setShowStartButton(true);
-          }, 10000);
-        }}
-        onError={handleVideoError}
-      />
+          <iframe
+            className="absolute top-0 left-0 w-full h-full z-50"
+            src="https://www.youtube.com/embed/hd4vRbjMyKE?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1"
+            title="Intro Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            onLoad={() => {
+              setTimeout(() => {
+                setShowStartButton(true);
+              }, 10000);
+            }}
+            onError={handleVideoError}
+          />
 
           <div className="absolute inset-0">
-  <div className="absolute top-1/2 right-4 -translate-y-1/2 z-[9999]">
-    {showStartButton && (
-      <button
-        onClick={onStartGame}
-        className="text-white text-opacity-80 hover:text-opacity-100 flex items-center gap-2 text-sm transition-all duration-300 backdrop-blur-sm bg-black bg-opacity-30 px-6 py-3 rounded-full hover:scale-110 hover:shadow-2xl"
-      >
-        <SkipForward size={16} />
-        Bỏ qua intro
-      </button>
-    )}
-  </div>
-</div>
+            <div className="absolute top-1/2 right-4 -translate-y-1/2 z-[9999]">
+              {showStartButton && (
+                <button
+                  onClick={onStartGame}
+                  className="text-white text-opacity-80 hover:text-opacity-100 flex items-center gap-2 text-sm transition-all duration-300 backdrop-blur-sm bg-black bg-opacity-30 px-6 py-3 rounded-full hover:scale-110 hover:shadow-2xl"
+                >
+                  <SkipForward size={16} />
+                  Bỏ qua intro
+                </button>
+              )}
+            </div>
+          </div>
 
         </div>
       ) : (
@@ -664,8 +661,8 @@ function App() {
         char === " "
           ? " "
           : guessedLetters.some((g) => characterMatches(g, char))
-          ? char
-          : "_"
+            ? char
+            : "_"
       )
       .join(" ");
 
@@ -896,11 +893,10 @@ function App() {
                     }
                     className={`px-4 py-3 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-110 select-none ${getLetterButtonStyle(
                       letter
-                    )} ${
-                      gameStatus !== "playing"
+                    )} ${gameStatus !== "playing"
                         ? "opacity-50 cursor-not-allowed"
                         : ""
-                    }`}
+                      }`}
                   >
                     {letter}
                     {showLetterAnimation === letter && (
@@ -931,11 +927,10 @@ function App() {
                     return (
                       <span
                         key={idx}
-                        className={`px-4 py-1 rounded-full text-lg font-semibold select-none ${
-                          correct
+                        className={`px-4 py-1 rounded-full text-lg font-semibold select-none ${correct
                             ? "bg-green-600 bg-opacity-80"
                             : "bg-red-600 bg-opacity-80"
-                        }`}
+                          }`}
                       >
                         {letter}
                       </span>
